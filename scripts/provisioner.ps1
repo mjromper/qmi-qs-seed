@@ -14,6 +14,11 @@ If ( $config.servers.sense ) {
 
 	& c:\shared-content\scripts\modules\qs-post-cfg.ps1
 
+	# Add Industry Solution apps
+	If ( $config.servers.sense.options.industry -eq $true ) {
+		& c:\shared-content\scripts\modules\qs-industry-solutions.ps1
+	}
+
 	# Add Advance Analytics Integration (R)
 	If ( $config.servers.sense.options.aai -eq $true ) {
 		& c:\shared-content\scripts\modules\qs-installR.ps1
