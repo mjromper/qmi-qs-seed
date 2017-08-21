@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<SharedPersistenceConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DbUserName>qliksenserepository</DbUserName>
+  <DbUserPassword>Qlik1234</DbUserPassword>
+  <DbHost>qmi-qs-seed</DbHost>
+  <DbPort>4432</DbPort>
+  <RootDir>\\qmi-qs-seed\QlikShare</RootDir>
+  <StaticContentRootDir>\\qmi-qs-seed\QlikShare\StaticContent</StaticContentRootDir>
+  <CustomDataRootDir>\\qmi-qs-seed\QlikShare\CustomData</CustomDataRootDir>
+  <ArchivedLogsDir>\\qmi-qs-seed\QlikShare\ArchivedLogs</ArchivedLogsDir>
+  <AppsDir>\\qmi-qs-seed\QlikShare\Apps</AppsDir>
+  <CreateCluster>true</CreateCluster>
+  <InstallLocalDb>true</InstallLocalDb>
+  <ConfigureDbListener>true</ConfigureDbListener>
+  <ListenAddresses>*</ListenAddresses>
+  <IpRange>0.0.0.0/0</IpRange>
+  <!--<JoinCluster>true</JoinCluster>-->
+</SharedPersistenceConfiguration>

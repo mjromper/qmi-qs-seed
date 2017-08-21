@@ -1,0 +1,33 @@
+{
+    "servers":
+    {
+        "name": "qmi-qs-seed",
+        "ip": "192.168.56.6",
+        "sense":
+        {
+            "central": true,
+            "proxy": true,
+            "persistence": "shared",
+            "options":
+            {
+                "patchSupport": false,
+                "aai": false,
+                "industry": false,
+                "geo": false,
+                "webConnetors": false,
+                "authGoogle": false,
+                "authOffice365": false
+            }
+        },
+        "box": "qlik/win2k16",
+        "memory": 4048,
+        "cpus": 2,
+        "vram": 64
+    },
+    "sense":
+    {
+        "serviceAccount": "qservice",
+        "serviceAccountPass": "Qlik1234",
+        "PostgresAccountPass": "Qlik1234"
+    }
+}

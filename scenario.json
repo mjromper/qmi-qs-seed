@@ -1,0 +1,27 @@
+{
+	"name": "qmi-qs-seed",
+	"description": "Qlik Sense Seed Project",
+	"category": "Qlik Sense",
+	"notes": "<p>Add here any html code you want to appear on tile for QMI client</p>",
+	"version": 1.0,
+	"author": "Author name here",
+	"email": "your@email.com",
+	"disabled": false,
+	"resources": [{
+			"name": "QMC",
+			"url": "http://qmi-qs-seed/qmc"
+		},
+		{
+			"name": "Hub",
+			"url": "http://qmi-qs-seed/hub"
+		},
+		{
+			"name": "Web Connectors",
+			"url": "http://qmi-qs-seed:5555/web"
+		},
+		{
+			"name": "User name / password",
+			"value": ".\\qlik / Qlik1234"
+		}
+	]
+}
