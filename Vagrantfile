@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
     end
     config.vm.hostname = server["name"]
     config.vm.synced_folder "./files", "c:/installation/"
-    config.vm.synced_folder "../shared-content", "c:/shared-content/"
+    config.vm.synced_folder "../../shared-content", "c:/shared-content/"
     config.vm.provision :shell, path: "./scripts/provisioner.ps1"
 
 end
