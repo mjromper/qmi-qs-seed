@@ -23,5 +23,6 @@
 			"name": "User name / password",
 			"value": ".\\qlik / Qlik1234"
 		}
-	]
+	],
+	"custom":true
 }
