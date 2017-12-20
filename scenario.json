@@ -4,6 +4,7 @@
 	"category": "Qlik Sense",
 	"notes": "<p>Add here any html code you want to appear on tile for QMI client</p>",
 	"version": 1.0,
+	"custom": true,
 	"author": "Author name here",
 	"email": "your@email.com",
 	"disabled": false,
@@ -16,12 +17,29 @@
 			"url": "http://qmi-qs-seed/hub"
 		},
 		{
-			"name": "Web Connectors",
-			"url": "http://qmi-qs-seed:5555/web"
-		},
-		{
 			"name": "User name / password",
 			"value": ".\\qlik / Qlik1234"
 		}
-	]
+	],
+	"config": {
+    	"allowUpdates": true,
+        "servers": [{
+            "name": "qmi-qs-seed",
+            "ip": "192.168.101.2",
+            "box": "qlik/win2k16",
+            "memory": 4096,
+            "cpus": 2,
+            "sense": {
+                "central": true,
+                "proxy": true,
+                "persistence": "shared",
+                "webConnetors": true,
+                "dataMarket": true,
+                "geo": true,
+                "aai": true,
+                "authGoogle": false,
+                "authOffice365": false
+            }
+        }]
+    }
 }
