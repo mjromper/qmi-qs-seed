@@ -33,7 +33,8 @@
                 "central": true,
                 "proxy": true,
                 "persistence": "shared",
-                "modules": {
+
+                "qmiExtra": {
                 	"webConnetors": true,
 	                "dataMarket": true,
 	                "geo": true,

@@ -3,11 +3,13 @@ Intent: Main powershell routine of the provision process
 #>
 
 $scenario = (Get-Content c:\vagrant\scenario.json -raw) | ConvertFrom-Json
+$sense = $scenario.config.servers[0].sense
+$qmiExtra = $sense.qmiExtra
 
 # Disable Password complexity, create Qlik user and grant remote desktop rights
 & c:\shared-content\scripts\modules\q-user-setup.ps1
 
-If ( $scenario.config.servers[0].sense ) {
+If ( Test-Path variable:\sense ) {
 
 	# Download the Qlik Sense binary selected by the end user of QMI.
 	& c:\shared-content\scripts\modules\qs-getBinary.ps1
@@ -31,45 +33,51 @@ If ( $scenario.config.servers[0].sense ) {
 	# Dependencies:
 	# - Requires creation of ReferenceData and ContentLibrary folders under shared-content directory.
 	& c:\shared-content\scripts\modules\qs-importData.ps1
+}
+
+
+# Install extra components for Qlik Sense
+If ( Test-Path variable:\qmiExtra ) {
 
 	# Acquire, install and configure Qlik Web Connectors
 	# Dependencies:
  	# - Addition of LicenseSetttings.xml and UserSettings.xml to c:\shared-content\files\QlikWebConnectors\
-	If ( $config.servers.sense.options.webConnetors -eq $true ) {
+	If ( $qmiExtra.webConnetors -eq $true ) {
 		& c:\shared-content\scripts\modules\q-WebConnectors.ps1
 	}
 
 	# Download and install geoAnalytics
-	If ( $config.servers.sense.options.geo -eq $true ) {
+	If ( $qmiExtra.geo -eq $true ) {
 		& c:\shared-content\scripts\modules\qs-geoAnalytics.ps1
 	}
 
 	# License Qlik Sense Data Market premium content packages
 	# Dependencies:
 	# - Requires updated version of qlik-license.json to include datamarket license details.
-	If ( $config.servers.sense.options.dataMarket -eq $true ) {
+	If ( $qmiExtra.dataMarket -eq $true ) {
 		& c:\shared-content\scripts\modules\qs-dataMarket.ps1
 	}
 
 	# Add Industry Solution apps
-	If ( $config.servers.sense.options.industry -eq $true ) {
+	If ( $qmiExtra.industry -eq $true ) {
 		& c:\shared-content\scripts\modules\qs-industry-solutions.ps1
 	}
 
 	# Add Advance Analytics Integration (R)
-	If ( $config.servers.sense.options.aai -eq $true ) {
+	If ( $qmiExtra.aai -eq $true ) {
 		& c:\shared-content\scripts\modules\qs-installR.ps1
 	}
 
 	# Add Ticket Authentication with Google
-	If ( $config.servers.sense.options.authGoogle -eq $true ) {
+	If ( $qmiExtra.authGoogle -eq $true ) {
 		& c:\shared-content\scripts\modules\qs-ticketauth-google.ps1
 	}
 
 	# Add Ticket Authentication with Office 365
-	If ( $config.servers.sense.options.authOffice365 -eq $true ) {
+	If ( $qmiExtra.authOffice365 -eq $true ) {
 		& c:\shared-content\scripts\modules\qs-ticketauth-office365.ps1
 	}
+
 }
 
 # Finish provision. Set windows lincense. Update hosts (networking). Display summary information.
