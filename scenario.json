@@ -33,12 +33,14 @@
                 "central": true,
                 "proxy": true,
                 "persistence": "shared",
-                "webConnetors": true,
-                "dataMarket": true,
-                "geo": true,
-                "aai": true,
-                "authGoogle": false,
-                "authOffice365": false
+                "modules": {
+                	"webConnetors": true,
+	                "dataMarket": true,
+	                "geo": true,
+	                "aai": true,
+	                "authGoogle": false,
+	                "authOffice365": false
+                }
             }
         }]
     }

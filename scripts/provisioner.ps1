@@ -2,12 +2,12 @@
 Intent: Main powershell routine of the provision process
 #>
 
-$config = (Get-Content c:\vagrant\files\qs-cfg.json -raw) | ConvertFrom-Json
+$scenario = (Get-Content c:\vagrant\scenario.json -raw) | ConvertFrom-Json
 
 # Disable Password complexity, create Qlik user and grant remote desktop rights
 & c:\shared-content\scripts\modules\q-user-setup.ps1
 
-If ( $config.servers.sense ) {
+If ( $scenario.config.servers[0].sense ) {
 
 	# Download the Qlik Sense binary selected by the end user of QMI.
 	& c:\shared-content\scripts\modules\qs-getBinary.ps1

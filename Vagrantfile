@@ -4,6 +4,7 @@
 Vagrant.require_version ">= 1.6.2"
 
 # Relative path where 'shared-content' can be found
+# IMPORTANT: Custom scenarios are deployed in folder '~/QlikMachineImages/personal'
 sharedContentRelativePath = '../../shared-content'
 
 require 'json'
