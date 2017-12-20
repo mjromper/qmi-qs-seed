@@ -27,7 +27,6 @@ If ( $config.servers.sense ) {
 	# Installation of Patch for Qlik Sense if selected product version has a Patch
 	& c:\shared-content\scripts\modules\qs-update.ps1
 
-
 	# Import reference data for Qlik Sense applications
 	# Dependencies:
 	# - Requires creation of ReferenceData and ContentLibrary folders under shared-content directory.
