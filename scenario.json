@@ -39,8 +39,8 @@
                     "webConnetors": true,
                     "dataMarket": true,
                     "geo": true,
-                    "aai": true,
-                    "industry": true,
+                    "aai": false,
+                    "industry": false,
                     "authGoogle": false,
                     "authOffice365": false
                 }
