@@ -66,6 +66,7 @@ If ( Test-Path variable:\qmiExtra ) {
 	# Add Advance Analytics Integration (R)
 	If ( $qmiExtra.aai -eq $true ) {
 		& c:\shared-content\scripts\modules\qs-installR.ps1
+		& c:\shared-content\scripts\modules\qs-install-python.ps1
 	}
 
 	# Add Ticket Authentication with Google
