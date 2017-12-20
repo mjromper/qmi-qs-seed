@@ -40,6 +40,7 @@
                     "dataMarket": true,
                     "geo": true,
                     "aai": true,
+                    "industry": true,
                     "authGoogle": false,
                     "authOffice365": false
                 }
