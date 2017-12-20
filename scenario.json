@@ -8,6 +8,7 @@
     "author": "Author name here",
     "email": "your@email.com",
     "disabled": false,
+    "plugin-dependencies": [],
     "resources": [{
             "name": "QMC",
             "url": "http://qmi-qs-seed/qmc"
