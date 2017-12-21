@@ -24,17 +24,15 @@ Intent: Main powershell routine of the provision process
 & c:\shared-content\scripts\modules\qs-update.ps1
 
 <#
-# Some Qlik Sense add-ons
+# Some Qlik Sense add-ons.
+# For more add-ons or configuration refer to shared-content/modules/scripts.
 
 # Qlik Web Connectors
 & c:\shared-content\scripts\modules\q-WebConnectors.ps1
-
 # GeoAnalytics
 & c:\shared-content\scripts\modules\qs-geoAnalytics.ps1
-
 # License Qlik Sense Data Market premium content packages
 & c:\shared-content\scripts\modules\qs-dataMarket.ps1
-
 # Import reference data for Qlik Sense applications
 & c:\shared-content\scripts\modules\qs-importData.ps1
 #>
