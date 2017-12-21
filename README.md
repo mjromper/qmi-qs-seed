@@ -1,5 +1,6 @@
 # Qlik Sense Seed Project
 
+## Description
 This is the Markdown file to inform users about this scenario. Add here any content you think is insteresting to be known about this scenario.
 
 ## Implementing a custom scenario
@@ -24,9 +25,8 @@ This is the Markdown file to inform users about this scenario. Add here any cont
 
 4. Modify markdown README.md file to describe your scenario in detail. This file is the information page for the users of your scenario, include details such: itent, description, software installed, URLs, users, support information, etc.
 
-5. Test provision. Type the following and wait for the provision to succeed.
-	```
-	vagrant up
-	```
-6. Zip the content folder.
+5. Test provision. Type `vagrant up` to run provision and `vagrant destroy -f` to delete. Repeat until success.
+
+6. Zip the content folder. Destroy the VM before zipping (`vagrant destroy -f`)
+
 7. Share it.
