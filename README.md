@@ -16,4 +16,4 @@ This is the Markdown file to inform users about this scenario. Add here any cont
 
 - Edit shared persistence configuration file *./files/sp-config.xml* with the hostname of your scenario.
 
-- Modify markdown README.md file to describe your scenario in detail. This file is the information page for the users of your scenaio, include details such: itent, description, software intalled, URLs, users, support information, etc.
+- Modify markdown README.md file to describe your scenario in detail. This file is the information page for the users of your scenario, include details such: itent, description, software installed, URLs, users, support information, etc.
