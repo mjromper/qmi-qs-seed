@@ -33,17 +33,7 @@
             "sense": {
                 "central": true,
                 "proxy": true,
-                "persistence": "shared",
-
-                "qmiExtra": {
-                    "webConnetors": true,
-                    "dataMarket": true,
-                    "geo": true,
-                    "aai": false,
-                    "industry": false,
-                    "authGoogle": false,
-                    "authOffice365": false
-                }
+                "persistence": "shared"
             }
         }]
     }
