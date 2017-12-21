@@ -14,4 +14,4 @@ This is the Markdown file to inform users about this scenario. Add here any cont
   - **config.servers** - array of servers (VMs) to deploy.
     - **sense** - if exists it will install Qlik Sense with specified configuration.
 
-- Edit file *./files/sq-config.xml* with the hostname of your scenario.
+- Edit shared persistence configuration file *./files/sp-config.xml* with the hostname of your scenario.
