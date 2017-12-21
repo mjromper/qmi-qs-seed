@@ -15,3 +15,5 @@ This is the Markdown file to inform users about this scenario. Add here any cont
     - **sense** - if exists it will install Qlik Sense with specified configuration.
 
 - Edit shared persistence configuration file *./files/sp-config.xml* with the hostname of your scenario.
+
+- Modify markdown README.md file to describe your scenario in detail. This file is the information page for the users of your scenaio, include details such: itent, description, software intalled, URLs, users, support information, etc.
