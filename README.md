@@ -8,6 +8,7 @@ This is the Markdown file to inform users about this scenario. Add here any cont
 ### Pre-requisites
 - Install Vagrant
 - Install Virtualbox
+- Have provisioned a QMI built-in scenario once at least. It provides with base scripts (shared-content folder)
 
 
 ### Steps
