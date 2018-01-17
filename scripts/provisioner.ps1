@@ -8,9 +8,6 @@ Intent: Main powershell routine of the provision process
 # Download the Qlik Sense binary selected by the end user of QMI.
 & c:\shared-content\scripts\modules\qs-getBinary.ps1
 
-# Download and install Access Database engine to support ODBC connectivity to excel and access files
-& c:\shared-content\scripts\modules\q-AccessDatabaseEngine.ps1
-
 # Configure Server for Qlik Sense installation
 & c:\shared-content\scripts\modules\qs-initial-cfg.ps1
 
@@ -27,8 +24,11 @@ Intent: Main powershell routine of the provision process
 # Some Qlik Sense add-ons.
 # For more add-ons or configuration refer to shared-content/modules/scripts.
 
+
 # Qlik Web Connectors
 & c:\shared-content\scripts\modules\q-WebConnectors.ps1
+# Download and install Access Database engine to support ODBC connectivity to excel and access files
+& c:\shared-content\scripts\modules\q-AccessDatabaseEngine.ps1
 # GeoAnalytics
 & c:\shared-content\scripts\modules\qs-geoAnalytics.ps1
 # License Qlik Sense Data Market premium content packages
